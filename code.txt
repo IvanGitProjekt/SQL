@@ -1,0 +1,38 @@
+
+int len=4
+int high=4
+
+int mas[4][4]={{1,0,1,0},
+	       {0,1,0,1},
+	       {0,0,1,0},
+	       {1,1,0,1}}
+
+
+int count=0;
+
+for (int i=1;i++;i<=len)
+{
+	for (int j=1;j++;j<=high)
+	{
+		if mas[i][j]==0 then count++;
+		func(i,j);
+
+	}
+
+}
+
+void func (int i,int j)
+{
+	mas[i][j]=1;
+	
+	if mas[i-1][j]==0 && (i-1)>=1 then func (i-1,j); 
+	
+	if mas[i+1][j]==0 && (i-1)<=len then func (i+1,j);
+	
+	if mas[i][j-1]==0 && (j-1)>=1 then func (i,j-1);
+	
+	if mas[i][j+1]==0 && (j+1)<=high then func (i,j+1);
+
+}
+
+print(count,"%d")
